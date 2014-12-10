@@ -6,8 +6,8 @@ sandman-pcf
 
 ##### Based on the Sandman project [https://github.com/jeffknupp/sandman](https://github.com/jeffknupp/sandman) 
 
-Sandman is an amazing python application that auto-generates a REST api for all the entities in an existing SQL database.
-When deployed to the Cloud Foundry platform its an extemely powerful tool for moderning access to SQL Server databases.
+Sandman is an amazing python application that auto-generates a REST api for entities in an existing SQL database.
+When deployed to the Cloud Foundry platform it becomes an extemely powerful tool for moderning access to SQL Server databases.
 In fact when used with a Cloud Foundry [User Provided Service]( http://docs.cloudfoundry.org/devguide/services/user-provided.html)
 the database to be REST enabled does not need to be running within the Cloud Foundry environment.  
 
@@ -16,13 +16,18 @@ the database to be REST enabled does not need to be running within the Cloud Fou
 When Sandman is deployed to Cloud Fondry the SQLAlchemy uri is contained in the Application Environment within Cloud Foundry.
 The SQL Server resource must be exposed within Cloud Foundry as an advertised service, but it does not need to run within Cloud Foundry.
 
-To connect to a remote sql server outside of Cloud Foundry create a UPS for example
+To connect to a remote sql server outside of Cloud Foundry, login to a Cloud Foundry environment using the 
+cli and create a User Provided Service that points to the SQL database server.
 
 ```
 cf cups remote-mysql -p '{"host":"192.168.109.2","port":"3306","database":"customer_database","user":"bob","password":"welcome1"}'
 ```
 
 Then edit the manifest.xml file and set the defined service name in the services section.
+
+Finally push the application using the cli 
+
+cf push myAppName
 
 ##### Local Testing
 
