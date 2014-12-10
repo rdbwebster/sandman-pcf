@@ -1,0 +1,2 @@
+sandman==0.9.8
+PyMySQL==0.6.3
