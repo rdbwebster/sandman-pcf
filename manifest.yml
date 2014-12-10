@@ -6,6 +6,4 @@ applications:
   intances: 1
   services:
   - remote-mysql
-  env:
-    SPRING_PROFILES_ACTIVE: cloud
-  timeout: 180
+  timeout: 60
