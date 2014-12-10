@@ -4,8 +4,7 @@ sandman-pcf
 #### A project that demonstrates how to deploy the Python Sandman application on Cloud Foundry
 
 
-##### Based on the Sandman project
-    [https://github.com/jeffknupp/sandman](https://github.com/jeffknupp/sandman) 
+##### Based on the Sandman project [https://github.com/jeffknupp/sandman](https://github.com/jeffknupp/sandman) 
 
 
 ##### Setup
